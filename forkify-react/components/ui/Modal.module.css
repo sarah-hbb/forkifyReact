@@ -1,0 +1,30 @@
+.modal-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 3, 13, 0.326);
+}
+
+
+.modal{
+    color: var(--secondary-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5em;
+    background: var(--gradient);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    color: var(--secondary-color);
+    border-radius: 1em;
+}
+
+.modal-icon{
+    font-size: 1.7em;
+    margin-left: .4em;
+}

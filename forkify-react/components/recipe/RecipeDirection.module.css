@@ -10,9 +10,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(168deg,var(--primary-color), rgb(189, 76, 241));
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background: var(--gradient);
+    box-shadow: var(--box-shadow);
     color: var(--secondary-color);
 }
 

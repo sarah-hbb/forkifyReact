@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment } from "react";
+
 
 const Message = (props) => {
   return (
-    <div>{props.message}</div>
-  )
-}
+    <Fragment>
+      <h2>{props.message}</h2>
 
-export default Message
+    </Fragment>
+  );
+};
+
+export default Message;

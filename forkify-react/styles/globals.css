@@ -6,6 +6,8 @@
   --text-color-light: grey;
   --bg-color : rgba(2, 9, 5, 0.123);
   --gradient: linear-gradient(168deg,var(--primary-color), rgb(189, 76, 241));
+  --box-shadow:  rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 html,
 body {

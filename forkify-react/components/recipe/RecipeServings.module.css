@@ -2,14 +2,13 @@
   text-transform: uppercase;
   min-width: 80%;
   color: var(--secondary-color);
-  background: linear-gradient(168deg,var(--primary-color), rgb(189, 76, 241));
+  background: var(--gradient);
   display: flex;
   justify-content: space-around;
   width: 100%;
   padding: 1em .0;
   margin: .3em 0;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow:var(--box-shadow);
   transition: all ease-in-out 200ms;
   border-radius: 1em;
   font-size: 80%;

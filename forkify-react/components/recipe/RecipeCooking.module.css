@@ -6,8 +6,7 @@
     min-height: 70%;
     color: var(--primary-color);
     padding: 1em;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: var(--box-shadow);
     background-color: var(--secondary-color);
     border-radius: 1em;
 }
