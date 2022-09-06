@@ -1,0 +1,48 @@
+.servings {
+  text-transform: uppercase;
+  min-width: 80%;
+  color: var(--secondary-color);
+  background: linear-gradient(168deg,var(--primary-color), rgb(189, 76, 241));
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1em .0;
+  margin: .3em 0;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transition: all ease-in-out 200ms;
+  border-radius: 1em;
+  font-size: 80%;
+}
+
+.servings:hover {
+  transform: scale(1.01, 1.01);
+}
+
+.servings span {
+  font-weight: 700;
+}
+
+.servings-item {
+  display: flex;
+  padding: 0 .5em;
+}
+
+.icon-btn {
+  color: inherit;
+  font-size: 25%;
+  border: none;
+  background: none;
+}
+
+.icon-btn-small {
+  font-size: 1.3em;
+}
+
+.icon {
+  transition: all ease-in-out 200ms;
+}
+
+.icon:hover {
+  transform: scale(1.1, 1.1);
+}

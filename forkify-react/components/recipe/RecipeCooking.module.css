@@ -1,0 +1,28 @@
+.ingredients{
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 70%;
+    color: var(--primary-color);
+    padding: 1em;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: var(--secondary-color);
+    border-radius: 1em;
+}
+
+.ingredient-item{
+    margin: .1em;
+    display: flex;
+    align-items: flex-start;
+    padding: .4em;
+    min-width: 19em;
+    flex: 3;
+}
+
+.ingredient-icon{
+    margin-right: .4em;
+    min-width: 1.5em;
+    min-height: 1.5em;
+}

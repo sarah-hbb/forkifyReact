@@ -1,0 +1,47 @@
+.recipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.icon-btn {
+  color: inherit;
+  font-size: 2.5em;
+  border: none;
+  background: none;
+}
+
+.icon-btn-small {
+  font-size: 1.3em;
+}
+
+.icon {
+  transition: all ease-in-out 200ms;
+}
+
+.icon:hover {
+  transform: scale(1.1, 1.1);
+}
+
+@media screen and (min-width: 950px) {
+  .recipe-middle-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .recipe-servings-cooking {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-shrink: 2;
+    flex-grow: 2;
+    min-height: 100%;
+    margin-right: 0.3em;
+ 
+  }
+}

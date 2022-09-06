@@ -1,0 +1,26 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.layout main {
+  flex: 2;
+  /* background-color: var(--secondary-color); */
+  padding: 1em;
+}
+.layout-footer {
+  text-align: center;
+  justify-self: flex-end;
+  padding:1em;
+  width: 100%;
+  border-top: solid 1px gray;
+
+}
+
+
+@media screen and (min-width: 650px) {
+  .layout{
+    padding:0 7% 0;
+  }
+}

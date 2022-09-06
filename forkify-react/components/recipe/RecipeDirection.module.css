@@ -1,0 +1,34 @@
+.recipe-direction{
+    flex: 1;
+    flex-shrink: 1;
+    flex-grow: 1;
+    border-radius: 1em;
+    padding:1em 2em;
+    margin-top: .3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(168deg,var(--primary-color), rgb(189, 76, 241));
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    color: var(--secondary-color);
+}
+
+.recipe-direction p{
+    padding: 3em
+}
+
+.recipe-direction span{
+    font-weight: 900;
+}
+
+.recipe-direction button{
+    padding: 1em 2em;
+    border-radius: 3em;
+    border: none;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
