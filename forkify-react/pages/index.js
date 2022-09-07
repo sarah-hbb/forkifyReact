@@ -7,10 +7,16 @@ import Modal from "../components/ui/Modal";
 
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
+  const showModalHandler=()=>{
+    setShowModal(true);
+    console.log(showModal);
+  }
   return (
     <Fragment>
-      {showModal && <Modal/>} 
+      {showModal && <Modal message={`some message`} success={true} onShow={showModalHandler}/>} 
+      <button onClick={showModalHandler}> show modal </button>
     </Fragment>
   );
 }
