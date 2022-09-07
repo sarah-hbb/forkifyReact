@@ -1,34 +1,49 @@
-import React, { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+
 import classes from "./Modal.module.css";
-import Message from "../message/Message";
-import { CgCloseO } from "react-icons/cg";
-import { FaRegSmileBeam } from "react-icons/fa";
-import { MdOutlineErrorOutline } from "react-icons/md";
+
+const Backdrop = (props) => {
+  return <div className={classes.backdrop} onClick={props.onCloseModal} />;
+};
+
+const ModalOverlay = (props) => {
+  return (
+    <div className={classes.modal}>
+      <div className={classes.content}>{props.children}</div>
+    </div>
+  );
+};
+
+
 
 const Modal = (props) => {
-  const [showModal, setShowModal] = useState(true);
-  const[modaleMessage, setModalMessage]= useState(props.message)
-  const closeModalHandler = () => {
-    setShowModal(false);
-};
-console.log(`show modal from modal component ${showModal}`);
 
 
-  return (
-    <Fragment>
-      {showModal && (
-        <div className={classes["modal-container"]} onClick={closeModalHandler}>
-          <div className={classes["modal"]}>
-            <Message message={props.message} />
-            <div className={classes["modal-icon"]}>
-              {props.success && <FaRegSmileBeam />}
-              {!props.success && <MdOutlineErrorOutline />}
-            </div>
-          </div>
-        </div>
-      )}
-    </Fragment>
-  );
+  // 🕳️🕳️🕳️ to rewrite our document in next js document, to create portal in _document.js [created by us], we should first create a page named _document.js [must named like this], add code that written exactly as it is, add our portal element [a div with id like 'modal-root'], then use below code to rerender document file, and return react ccomponent conditionally like this
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    return ()=>setMounted(false)
+  }, []);
+
+
+  if (mounted) {
+    return (
+      <Fragment>
+        {ReactDOM.createPortal(
+          <Backdrop onCloseModal={props.onCloseModal} />,
+          document.getElementById("modal-root")
+        )}
+        {ReactDOM.createPortal(
+          <ModalOverlay onCloseModal={props.onCloseModal}>{props.children}</ModalOverlay>,
+          document.getElementById("modal-root")
+        )}
+      </Fragment>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Modal;

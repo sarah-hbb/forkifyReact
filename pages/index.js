@@ -13,9 +13,14 @@ export default function Home() {
     setShowModal(true);
     console.log(showModal);
   }
+
+  const closeModalHandler =()=>{
+    setShowModal(false)
+  }
   return (
     <Fragment>
-      {showModal && <Modal message={`some message`} success={true} onShow={showModalHandler}/>} 
+      {showModal && <Modal onClose={closeModalHandler}> {`some text message`}
+        </Modal>} 
       <button onClick={showModalHandler}> show modal </button>
     </Fragment>
   );

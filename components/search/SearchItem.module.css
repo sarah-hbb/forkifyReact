@@ -1,7 +1,7 @@
 .search-item {
   position: relative;
   flex: 1;
-  width: 40vh;
+  width: 20em;
   min-height: 20rem;
   color: var(--primary-color);
 }

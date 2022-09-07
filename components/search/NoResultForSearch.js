@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
-import classes from './NoResultForSearch.module.css'
-import noresult from '../../assets/images/noresult.svg'
+import classes from "./NoResultForSearch.module.css";
+import noresult from "../../assets/images/noresult.svg";
 
 const NoPropertyFound = () => {
   return (
