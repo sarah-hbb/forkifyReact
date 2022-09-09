@@ -23,11 +23,9 @@ export const AJAX = async (url, uploadData = undefined) => {
       const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
       const data = await res.json();
   
-      // if (data.status !== 'success') throw new Error(`🧶🧶🧶`);
-  
+      // if (data.status !== 'success') throw new Error(`🧶🧶🧶`)
       return data;
-    } catch (err) {
-      console.error(`${err} in helper🧨🧨`);
+    } catch (err) {;
       throw err;
     }
   };

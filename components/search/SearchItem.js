@@ -5,6 +5,7 @@ import classes from "./SearchItem.module.css";
 import Card from "../ui/Card";
 
 const SearchItem = ({ id, title, publisher, imageUrl }) => {
+  
   return (
     <Card>
       <Link href={`/recipe/${id}`}>

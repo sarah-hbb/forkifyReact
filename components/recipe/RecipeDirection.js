@@ -3,7 +3,7 @@ import classes from './RecipeDirection.module.css'
 
 const RecipeDirection = (props) => {
     const recipeData = props.recipeData;
-    console.log(recipeData);
+    //console.log(recipeData);
   return (
     <div className={classes['recipe-direction']}>
         <h1>HOW TO COOK IT</h1>
