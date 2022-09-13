@@ -13,21 +13,21 @@ const Navbar = () => {
     <nav className="nav">
       <ul className={classes["nav-list"]}>
         <div className={classes["logo"]}>
-          <Image src={logo} width={100} height={80} />
+          <Image src={logo} layout="fill" objectFit="cover" />
         </div>
         <SearchBox />
         <div className={classes["nav-btns"]}>
           <li className={classes["nav__item--add-recipe"]}>
             <button className={classes["nav__btn"]}>
               <TiPlusOutline />
-              <span> add recipe </span>
+              <span className={classes["nav__btn__span"]}> add recipe </span>
             </button>
           </li>
           <li className={classes["nav__item--bookmark"]}>
             <Link href={"/bookmarks"}>
               <button className={classes["nav__btn"]}>
                 <TiHeartOutline />
-                <span> bookmarks </span>{" "}
+                <span className={classes["nav__btn__span"]}> bookmarks </span>
               </button>
             </Link>
           </li>
