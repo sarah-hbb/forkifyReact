@@ -2,22 +2,25 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import SearchList from "../../components/search/SearchList";
+
+import RecipeList from "../../components/recipe/RecipeList";
 import NoResultForSearch from "../../components/search/NoResultForSearch";
+import Modal from "../../components/ui/Modal";
 
 import { AJAX } from "../../utils/fetchApi";
 import { API_URL, KEY } from "../../assets/config/config";
-import Modal from "../../components/ui/Modal";
 
 const searchPage = (props) => {
+  //console.log(bookmarks);
   const router = useRouter();
   const searchQuery = router.query;
-  //console.log(searchQuery.query);
+
   const { recipes } = props.recipes;
+
   //console.log(recipes);
   const [showModal, setShowModal] = useState(false);
-  const [emptyQuery,setEmptyQuery]=useState(false);
-  const[noResult,setNoResult]=useState(false);
+  const [emptyQuery, setEmptyQuery] = useState(false);
+  const [noResult, setNoResult] = useState(false);
   const closeModalHandler = (e) => {
     e.preventDefault();
     setShowModal(false);
@@ -25,16 +28,16 @@ const searchPage = (props) => {
     setNoResult(false);
   };
 
-  useEffect(()=>{
-    if(searchQuery.query === "" ){
+  useEffect(() => {
+    if (searchQuery.query === "") {
       setShowModal(true);
       setEmptyQuery(true);
-    };
-    if(recipes.length === 0 && searchQuery.query !== ""){
-      setShowModal(true);
-      setNoResult(true)
     }
-  },[searchQuery])
+    if (recipes.length === 0 && searchQuery.query !== "") {
+      setShowModal(true);
+      setNoResult(true);
+    }
+  }, [searchQuery]);
 
   return (
     <Fragment>
@@ -48,7 +51,7 @@ const searchPage = (props) => {
           <NoResultForSearch />
         </Modal>
       )}
-      <SearchList searchRecipes={recipes} />
+      <RecipeList recipes={recipes} />
     </Fragment>
   );
 };

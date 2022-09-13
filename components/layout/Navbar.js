@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 import logo from "../../assets/images/logo.png";
 
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <ul className={classes["nav-list"]}>
-        <div className={classes['logo']}>
+        <div className={classes["logo"]}>
           <Image src={logo} width={100} height={80} />
         </div>
         <SearchBox />
@@ -23,10 +24,12 @@ const Navbar = () => {
             </button>
           </li>
           <li className={classes["nav__item--bookmark"]}>
-            <button className={classes["nav__btn"]}>
-              <TiHeartOutline />
-              <span> bookmarks </span>
-            </button>
+            <Link href={"/bookmarks"}>
+              <button className={classes["nav__btn"]}>
+                <TiHeartOutline />
+                <span> bookmarks </span>{" "}
+              </button>
+            </Link>
           </li>
         </div>
       </ul>

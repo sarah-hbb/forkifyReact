@@ -69,3 +69,11 @@
     filter: blur(0.4px);
   }
 }
+
+.image-icon-btns {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-2em, -30%);
+}
