@@ -8,7 +8,7 @@ const IngredientForm = (props) => {
   const [description, setDescription] = useState();
 
   const onBlureHandler = () => {
-    const ingredientObject = { quantity, unit, description };
+    const ingredientObject = { number,quantity, unit, description };
     if (description) {
       props.onGetIngredient(ingredientObject)
     }

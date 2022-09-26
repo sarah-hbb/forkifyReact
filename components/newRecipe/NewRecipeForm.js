@@ -1,4 +1,4 @@
-import React, { useState, Fragment,useContext } from "react";
+import React, { useState, Fragment, useContext, useEffect } from "react";
 // style
 import classes from "./NewRecipeForm.module.css";
 // components
@@ -44,9 +44,16 @@ const NewRecipeForm = () => {
   ////// 2.Getting ingredients form inputs from IngredientForm component
   const [ingredients, setIngredients] = useState([]);
   const getIngredientsHandler = (ingObj) => {
-    setIngredients((prvIngs) => [...prvIngs, ingObj]);
+    const index = ingredients.findIndex((el) => el.number === ingObj.number);
+    if (index === -1) {
+      setIngredients((prvIngs) => [...prvIngs, ingObj]);
+    }
+    if(index !== -1){
+      const updatedIngredients=ingredients.filter(el=>el.number !== ingObj.number);
+      setIngredients([...updatedIngredients,ingObj])
+    }
   };
-  //console.log(ingredients);
+  console.log(ingredients);
 
   const router = useRouter();
 
@@ -74,13 +81,13 @@ const NewRecipeForm = () => {
       };
       console.log(recipeObj);
       // 2️⃣ call api to add tecipe
-      const {data} = await AJAX(
+      const { data } = await AJAX(
         `https://forkify-api.herokuapp.com/api/v2/recipes?search=${recipeObj.title}&key=${KEY}`,
         recipeObj
       );
       console.log(data.recipe.id);
+
       // 3️⃣ ADD UPLOADED RECIPE TO BOOKMARKS
-      
       bookmarksCtx.dispatchBookmarks({
         type: "ADD_TO_BOOKMSRKS",
         recipe: data.recipe,
