@@ -18,7 +18,7 @@ const RecipeCooking = (props) => {
               !ing.quantity
                 ? ""
                 : new Fraction(quantityUpdateRate * ing.quantity).toString()
-            } ${ing.unit} ${ing.description}`}
+            } ${ing.unit ? ing.unit : ''} ${ing.description}`}
           </div>
         ))}
       </div>

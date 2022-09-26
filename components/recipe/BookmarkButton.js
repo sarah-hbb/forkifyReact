@@ -32,8 +32,8 @@ const BookmarkButton = (props) => {
       });
     }
   };
-  console.log(bookmarksCtx.bookmarks);
-  console.log(isBookmarked);
+  // console.log(bookmarksCtx.bookmarks);
+  // console.log(isBookmarked);
 
   return (
     <Fragment>

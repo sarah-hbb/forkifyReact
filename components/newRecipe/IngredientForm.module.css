@@ -1,0 +1,52 @@
+.ingredients {
+  /* background-color: blue; */
+  min-width: 100%;
+  margin-bottom: 0.3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ingredients input {
+  padding: 1em 0.5em;
+  margin: 0.1em;
+  border: 1px solid var(--primary-color);
+  border-radius: 1em;
+}
+.ingredients label {
+  width: 35%;
+}
+.quantity {
+  width: 20%;
+  /* background-color: red; */
+}
+
+.unit {
+  width: 43%;
+  /* background-color: coral; */
+}
+
+.description {
+  width: 100%;
+  /* background-color: bisque; */
+}
+
+@media screen and (min-width: 650px) {
+  .ingredients label {
+    flex: 2;
+  }
+  .quantity {
+    flex: 2;
+  }
+
+  .unit {
+    flex: 2;
+    /* background-color: white; */
+  }
+
+  .description {
+    flex: 4;
+  }
+}

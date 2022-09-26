@@ -7,7 +7,7 @@ import BookmarksContext from "../../store/bookmarks-context";
 const Bookmarks = (props) => {
   const bookmarksCtx = useContext(BookmarksContext);
   const bookmarks = bookmarksCtx.bookmarks;
-  console.log(bookmarks);
+  //console.log(bookmarks);
    return <RecipeList recipes={bookmarks} />;
 };
 

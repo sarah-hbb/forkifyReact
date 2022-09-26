@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images:{
-    domains:['forkify-api.herokuapp.com']
+    domains:['forkify-api.herokuapp.com','www.thedeliciouscrescent.com']
 },
 }
 

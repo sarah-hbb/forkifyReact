@@ -18,9 +18,7 @@ const ModalOverlay = (props) => {
 
 
 const Modal = (props) => {
-
-
-  // 🕳️🕳️🕳️ to rewrite our document in next js document, to create portal in _document.js [created by us], we should first create a page named _document.js [must named like this], add code that written exactly as it is, add our portal element [a div with id like 'modal-root'], then use below code to rerender document file, and return react ccomponent conditionally like this
+  // 🕳️🕳️🕳️ to rewrite our document in next js document, to create portal in _document.js [created by us], we should first create a page named _document.js [must named like this], add code that written exactly as it is, add our portal element [a div with id like 'modal-root'], then use below code to rerender document file, and return react component conditionally like this
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);

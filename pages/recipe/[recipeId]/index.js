@@ -1,3 +1,4 @@
+// domain.com/recipe/[recipeId]
 import React, { Fragment, useEffect, useState } from "react";
 import { KEY, API_URL } from "../../../assets/config/config";
 import { AJAX } from "../../../utils/fetchApi";

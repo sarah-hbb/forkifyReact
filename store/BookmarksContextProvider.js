@@ -10,6 +10,7 @@ const BookmarksContextProvider = (props) => {
     () => {
       let localData;
       if (typeof window !== "undefined") {
+        //localStorage.clear();
         localData = localStorage.getItem("bookmarks");
       }
       return localData ? JSON.parse(localData) : [];

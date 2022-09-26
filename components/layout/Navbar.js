@@ -18,10 +18,12 @@ const Navbar = () => {
         <SearchBox />
         <div className={classes["nav-btns"]}>
           <li className={classes["nav__item--add-recipe"]}>
-            <button className={classes["nav__btn"]}>
-              <TiPlusOutline />
-              <span className={classes["nav__btn__span"]}> add recipe </span>
-            </button>
+            <Link href={'/new-recipe'}>
+              <button className={classes["nav__btn"]}>
+                <TiPlusOutline />
+                <span className={classes["nav__btn__span"]}> add recipe </span>
+              </button>
+            </Link>
           </li>
           <li className={classes["nav__item--bookmark"]}>
             <Link href={"/bookmarks"}>
