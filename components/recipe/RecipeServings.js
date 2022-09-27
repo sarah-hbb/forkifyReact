@@ -41,7 +41,7 @@ const RecipeServings = (props) => {
 
         <div className={classes["servings-item"]}>
           <button
-            className={`${classes["icon-btn"]} ${classes["icon-btn-small"]}
+            className={`${classes["icon-btn"]} ${classes["icon-btn-small"]} ${classes["icon"]}
             `}
           >
             <HiUserGroup />

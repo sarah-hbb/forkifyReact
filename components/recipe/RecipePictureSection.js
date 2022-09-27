@@ -8,7 +8,7 @@ import { BsSuitHeartFill, BsSuitHeart, BsPerson } from "react-icons/bs";
 
 const RecipePictureSection = (props) => {
   const recipeData = props.recipeData;
-  const uploadByYou = props.uploadByYou;
+  const uploadByYou = recipeData.key;
 
   return (
     <Fragment>

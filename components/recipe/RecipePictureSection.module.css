@@ -35,19 +35,20 @@
 
 .icon-btn {
   color: inherit;
-  font-size: 2.5em;
-  border: none;
+  font-size: 3em;
   background: none;
+  border: none;
 }
 
 .icon {
   transition: all ease-in-out 200ms;
+  background-color: var(--secondary-color);
+  border: solid 1px;
+  margin:0 .1em;
+  border-radius: 50%;
+  padding: .1em;
 }
 
-.icon:hover {
-  transform: scale(1.4, 1.4);
-  color: var(--secondary-color);
-}
 
 @media screen and (min-width: 850px) {
   .recipe-title {

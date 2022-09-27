@@ -20,15 +20,10 @@ const RecipePage = (props) => {
     //console.log(quantityUpdateRate);
   };
 
-  const [uploadByYou, setUploadByYou] = useState(false);
-
   return (
     <Fragment>
       <div className={classes["recipe"]}>
-        <RecipePictureSection
-          recipeData={recipeData}
-          uploadByYou={uploadByYou}
-        />
+        <RecipePictureSection recipeData={recipeData} />
         <div className={classes["recipe-middle-section"]}>
           <div className={classes["recipe-servings-cooking"]}>
             <RecipeServings

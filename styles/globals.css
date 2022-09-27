@@ -39,6 +39,9 @@ li{
 input{
   outline: none;
 }
+button{
+  outline: none;
+}
 
 @media (prefers-color-scheme: dark) {
   /* html {

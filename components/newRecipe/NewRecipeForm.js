@@ -53,7 +53,7 @@ const NewRecipeForm = () => {
       setIngredients([...updatedIngredients,ingObj])
     }
   };
-  console.log(ingredients);
+  //console.log(ingredients);
 
   const router = useRouter();
 
@@ -79,13 +79,13 @@ const NewRecipeForm = () => {
         servings: servingsInput,
         ingredients,
       };
-      console.log(recipeObj);
+      
       // 2️⃣ call api to add tecipe
       const { data } = await AJAX(
         `https://forkify-api.herokuapp.com/api/v2/recipes?search=${recipeObj.title}&key=${KEY}`,
         recipeObj
       );
-      console.log(data.recipe.id);
+      //console.log(data.recipe);
 
       // 3️⃣ ADD UPLOADED RECIPE TO BOOKMARKS
       bookmarksCtx.dispatchBookmarks({
