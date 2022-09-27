@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment} from "react";
 import classes from "./RecipePictureSection.module.css";
 import BookmarkButton from "./BookmarkButton";
 
 import Image from "next/image";
 
-import { BsSuitHeartFill, BsSuitHeart, BsPerson } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 
 const RecipePictureSection = (props) => {
   const recipeData = props.recipeData;
