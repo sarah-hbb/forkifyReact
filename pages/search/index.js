@@ -10,7 +10,7 @@ import Modal from "../../components/ui/Modal";
 import { AJAX } from "../../utils/fetchApi";
 import { API_URL, KEY } from "../../assets/config/config";
 
-const searchPage = (props) => {
+const SearchPage = (props) => {
   //console.log(bookmarks);
   const router = useRouter();
   const searchQuery = router.query;
@@ -67,4 +67,4 @@ export async function getServerSideProps({ query }) {
   };
 }
 
-export default searchPage;
+export default SearchPage;
