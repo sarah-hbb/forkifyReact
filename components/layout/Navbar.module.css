@@ -18,8 +18,7 @@ position: relative;
 }
 
 .nav-list > * {
-  margin: 0 0 0 1em;
-  /* background-color: rgba(243, 209, 215, 0.453); */
+  margin: 0 0 0 .1em;
 }
 
 .nav-btns {
@@ -49,7 +48,7 @@ position: relative;
 
 @media screen and (min-width: 400px) {
   .nav__btn{
-    margin: 0 0.3em;
+    margin: 0 0.1em;
   }
 
   .logo{
