@@ -28,16 +28,10 @@ const NewRecipeForm = () => {
   // Getting data from forms
 
   ////// 1. Getting recipe data from form Recipe Data section
-  const [titleInput, setTitleInput] = useState("Baghali polo");
-  const [urlInput, setUrlInput] = useState(
-    "https://www.thedeliciouscrescent.com/baghali-polo-persian-dill-rice/"
-  );
-  const [imageUrlInput, setImageUrlInput] = useState(
-    "https://www.thedeliciouscrescent.com/wp-content/uploads/2018/09/Baghali-Polo.jpg"
-  );
-  const [publisherInput, setPublisherInput] = useState(
-    "The Delicious Crescent"
-  );
+  const [titleInput, setTitleInput] = useState();
+  const [urlInput, setUrlInput] = useState( );
+  const [imageUrlInput, setImageUrlInput] = useState();
+  const [publisherInput, setPublisherInput] = useState();
   const [cookingTimeInput, setCookingTimeInput] = useState(60);
   const [servingsInput, setServingsInput] = useState(12);
 
