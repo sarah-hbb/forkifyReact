@@ -9,11 +9,6 @@ const Layout = (props) => {
       <Head>
         <title>Forkify with React</title>
         <meta name="description" content="forkify with react" />
-        <link
-          rel="shortcut icon"
-          href="./favicon.ico
-          "
-        />
       </Head>
 
       <Navbar />
