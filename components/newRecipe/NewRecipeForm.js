@@ -32,8 +32,8 @@ const NewRecipeForm = () => {
   const [urlInput, setUrlInput] = useState( );
   const [imageUrlInput, setImageUrlInput] = useState();
   const [publisherInput, setPublisherInput] = useState();
-  const [cookingTimeInput, setCookingTimeInput] = useState(60);
-  const [servingsInput, setServingsInput] = useState(12);
+  const [cookingTimeInput, setCookingTimeInput] = useState();
+  const [servingsInput, setServingsInput] = useState();
 
   ////// 2.Getting ingredients form inputs from IngredientForm component
   const [ingredients, setIngredients] = useState([]);
