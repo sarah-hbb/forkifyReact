@@ -5,8 +5,8 @@ import { BiCheck } from "react-icons/bi";
 
 const RecipeCooking = (props) => {
   const ingredients = props.ingredients;
+  console.log(ingredients);
   const quantityUpdateRate = props.quantityUpdateRate;
-  //console.log(quantityUpdateRate);
 
   return (
     <Fragment>
@@ -27,3 +27,5 @@ const RecipeCooking = (props) => {
 };
 
 export default RecipeCooking;
+
+

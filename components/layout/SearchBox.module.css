@@ -6,6 +6,7 @@
   background-color: var(--secondary-color);
   border-radius: 2em;
   color: var(--primary-color);
+  margin-left: 1em;
 }
 
 .search-box input {

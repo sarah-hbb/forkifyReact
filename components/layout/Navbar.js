@@ -2,17 +2,22 @@ import React from "react";
 import classes from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import logo from "../../assets/images/logo.png";
 
 import SearchBox from "./SearchBox";
+
 import { TiPlusOutline, TiHeartOutline } from "react-icons/ti";
 
+
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <nav className="nav">
       <ul className={classes["nav-list"]}>
-        <div className={classes["logo"]}>
+        <div className={classes["logo"]} onClick={()=>router.push('/')}>
           <Image src={logo} layout="fill" objectFit="cover" />
         </div>
         <SearchBox />
